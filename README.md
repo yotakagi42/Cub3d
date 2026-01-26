@@ -2,4 +2,4 @@
 
 [ayamamot](./ayamamot.md)  
 
-[yotakagi](./yotakagi.md)
+[yotakagi](./yota1kagi.md)
