@@ -20,7 +20,7 @@ int	main(void)
 	t_game	game;
 
 	//mapのパースをしてほしい
-	//壁の判定とmap内の空白を０に置き換える
+	//壁の判定とmap内の空白を1に置き換える
 	//playerの初期位置を設定する(詳細はinit_player)
 	//parse用の関数内でinit_mapとinit_playerを呼び出しちゃって
 	//init_game内は呼び出し消すとかでいいかも
