@@ -66,15 +66,18 @@ void	load_texture(t_game *game, int idx, char *path)
 //N,S,E,Wがplayerの開始位置と向いている向き
 //Nなら(dir_x,dir_y)=(0,-1),(plane_x,plane_y)=(0.66,0)
 //Sなら(dir_x,dir_y)=(0,1),(plane_x,plane_y)=(-0.66,0)
-//Eなら(dir_x,dir_y)=(1,0),(plane_x,plane_y)=(0)
-//Wなら(dir_x,dir_y)=(-1,0),(plane_x,plane_y)=()
+//Eなら(dir_x,dir_y)=(1,0),(plane_x,plane_y)=(0,0.66)
+//Wなら(dir_x,dir_y)=(-1,0),(plane_x,plane_y)=(0,-0.66)
 //speedの修正が必要(スペックに関わらず1秒で進む距離を一定にするため)
 void	init_player(t_game *game)
 {
+	//posがplayerの初期位置
 	game->pos_x = 11.5;
 	game->pos_y = 12.0;
+	//dirがplayerの初期向き
 	game->dir_x = -1.0;
 	game->dir_y = 0.0;
+	//planeがplayerの初期向き
 	game->plane_x = 0.0;
 	game->plane_y = -0.66;
 	game->move_speed = 0.0;
