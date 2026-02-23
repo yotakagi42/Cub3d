@@ -102,7 +102,7 @@ void	calc_tex_x(t_game *game, t_ray *ray)
 		wall_x = game->pos_x + ray->perp_wall_dist * ray->ray_dir_x;
 	wall_x -= floor(wall_x);
 	ray->tex_x = (int)(wall_x * (double)TEX_W);
-	if ((ray->side == 0 && ray->ray_dir_x > 0)
-		|| (ray->side == 1 && ray->ray_dir_y < 0))
+	if ((ray->side == 0 && ray->ray_dir_x < 0)
+		|| (ray->side == 1 && ray->ray_dir_y > 0))
 		ray->tex_x = TEX_W - ray->tex_x - 1;
 }
